@@ -10,16 +10,17 @@ body {
     margin: 0;
 }
 /*  #f0b90b; */
+/* #f0b90b; */
 .window {
   position: relative;
   cursor: default;
   margin: 2em auto; width: 80%;
-  background: #f0b90b; color: white;
-  border: 6px white;
-  border-radius: 20px;
+  background: #24292e; color: #f0b90b;
+  border: 6px #f0b90b;
+  border-radius: 10px;
   padding: 1em;
   box-shadow:
-    0   0   0   3px #3465a4,
+    0   0   0   3px #f0b90b,
     1em 1em 3px 0 rgba(0,0,0,.5);
   max-width: 640px;
 }
@@ -30,24 +31,27 @@ body {
         0   0   0   3px red,
         1em 1em 3px 0 rgba(0,0,0,.5);
     display: none;
+    border-radius: 10px;
 }
 
 
 .window.gold {
   background:#f0b90b;
-  color: black;
-  border-color: white;
+  color: #f0b90b;
+  border: 6px #f0b90b;
+  border-radius: 10px;
   box-shadow:
-    0   0   0   3px silver,
+    0   0   0   3px #f0b90b,
     1em 1em 3px 0 rgba(0,0,0,.5);
 }
 
 .window.white {
-  background: silver;
-  color: black;
+  background: #24292e;
+  color: #f0b90b;
   border-color: white;
+  border-radius: 10px;
   box-shadow:
-    0   0   0   3px silver,
+    0   0   0   3px #f0b90b,
     1em 1em 3px 0 rgba(0,0,0,.5);
 }
 
@@ -77,8 +81,6 @@ body {
 button {
   margin:0;padding:0;border:none;
   cursor: pointer;
-  border-radius: 7px;
-
 }
 
 button,
@@ -144,7 +146,7 @@ button:focus:before,
 
 button:first-letter,
 .button:first-letter {
-  color: #fff;
+  /* color: yellow; */
 }
 
 input, textarea {
@@ -217,7 +219,9 @@ li {
 
 .top-menu-bar {
   top: 0; left: 0; right: 0;
-  background: silver;
+  padding: 1em;
+  background: #f0b90b;
+  color: black;
   font-weight: bolder;
   text-align: center;
 }
@@ -295,6 +299,7 @@ p.exchange-rate {
   flex: 1;
   padding: 1em;
   border: 0;
+  border-radius: 10px;
 }
 
 .info > div,
