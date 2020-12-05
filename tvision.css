@@ -15,7 +15,8 @@ body {
   cursor: default;
   margin: 2em auto; width: 80%;
   background: #f0b90b; color: white;
-  border: 6px double white;
+  border: 6px white;
+  border-radius: 20px;
   padding: 1em;
   box-shadow:
     0   0   0   3px #3465a4,
@@ -76,6 +77,8 @@ body {
 button {
   margin:0;padding:0;border:none;
   cursor: pointer;
+  border-radius: 7px;
+
 }
 
 button,
@@ -141,7 +144,7 @@ button:focus:before,
 
 button:first-letter,
 .button:first-letter {
-  color: yellow;
+  color: #fff;
 }
 
 input, textarea {
