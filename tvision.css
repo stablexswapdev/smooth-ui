@@ -1,19 +1,20 @@
 html {
-  background: #a5a4ce;
-  font-family: System, monospace;
+  background: #111111;
+  font-family: 'Quicksand', sans-serif;
   font-size: 10pt
 }
 
 body {
     padding: 0;
+    background: #111111; 
     margin: 0;
 }
-
+/*  #f0b90b; */
 .window {
   position: relative;
   cursor: default;
   margin: 2em auto; width: 80%;
-  background: #3465a4; color: white;
+  background: #f0b90b; color: white;
   border: 6px double white;
   padding: 1em;
   box-shadow:
@@ -28,6 +29,16 @@ body {
         0   0   0   3px red,
         1em 1em 3px 0 rgba(0,0,0,.5);
     display: none;
+}
+
+
+.window.gold {
+  background:#f0b90b;
+  color: black;
+  border-color: white;
+  box-shadow:
+    0   0   0   3px silver,
+    1em 1em 3px 0 rgba(0,0,0,.5);
 }
 
 .window.white {
@@ -75,12 +86,12 @@ button,
   color: white;
   font-family: inherit;
   font-size: inherit;
-  background: green;
+  background: grey;
   padding: 0 1em;
   box-shadow: .5em .5em 3px rgba(0,0,0,.5);
   position: relative;
   transition: .2s all ease-in;
-  border: 1px outset green;
+  border: 1px outset grey;
 }
 
 button.full-width,
@@ -134,7 +145,7 @@ button:first-letter,
 }
 
 input, textarea {
-  background: blue;
+  background: grey;
   color: aqua;
   width: 100%;
   max-width: 100%;
@@ -225,7 +236,7 @@ li {
 }
 
 .top-menu-bar a.selected, .poolsdialog div:hover, .poolsdialog div:hover a, .poolsdialog div:hover a:visited {
-    background-color: blue;
+    background-color: grey;
     color: white;
 }
 
@@ -402,7 +413,7 @@ div.info table td {
 }
 
 .top-menu-bar #poolsdropdown:hover {
-  background-color: blue;
+  background-color: grey;
   color: white;
 }
 
