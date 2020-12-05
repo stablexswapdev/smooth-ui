@@ -17,20 +17,7 @@ async function init(type) {
               infuraId: "c334bb4b45a444979057f0fb8a0c9d1b" // required
             }
         },
-        authereum: {
-            package: Authereum, // required
-            options: {}
-        },
-        burnerconnect: {
-            package: BurnerProvider.default, // required
-            options: {}
-        },
-        fortmatic: {
-            package: Fortmatic, // required
-            options: {
-              key: "pk_live_190B10CE18F47DCD" // required
-            }
-        }
+   
     };
 
     const web3Connect = new Web3Connect.default.Core({
