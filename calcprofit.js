@@ -271,7 +271,7 @@ async function getAvailable(curr) {
 }
 
 async function init_ui() {
-    priceData = await $.getJSON('https://compound.curve.fi/stats.json')
+    priceData = await $.getJSON('https://v2.stablexswap.com/stats.json')
     for(let i = 0; i < N_COINS; i++) {
         let symbol = await coins[i].methods.symbol().call()
         ADDRESSES[symbol] = coins[i]._address;

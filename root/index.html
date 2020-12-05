@@ -32,7 +32,7 @@
                     el.classList.add('selected')
             })
             $('.poolsdialog > div').eq(activePoolLink).addClass('selected')
-            var urls = ['https://compound.curve.fi', 'https://usdt.curve.fi', 'https://y.curve.fi', 'https://busd.curve.fi']        
+            var urls = ['https://v2.stablexswap.com', 'https://usdt.curve.fi', 'https://y.curve.fi', 'https://busd.curve.fi']        
             let stats = await Promise.all(urls.map(url=>$.getJSON(url+'/stats.json')))
             for(let i = 0; i < stats.length; i++) {
                 let json = stats[i];
@@ -85,7 +85,7 @@
             <fieldset class='poolsdialog'>
                 <legend>Curve pools</legend>
                 <div>
-                    <a href='https://compound.curve.fi'>0.  
+                    <a href='https://v2.stablexswap.com'>0.  
                         <span class='pooltext'>Compound</span> 
                         <span class='pools'>[(c)DAI, (c)USDC]</span>  
                         <span class='apr'>APY: <span></span>%</span>
