@@ -94,7 +94,8 @@ async function ensure_token_allowance() {
 async function init_contracts() {
     try {
         let networkId = await web3provider.eth.net.getId();
-        if(networkId != 1) {
+        // May need to allow for if network is testnet
+        if(networkId != 56) {
             $('#error-window').text('Error: wrong network type. Please switch to mainnet');
             $('#error-window').show();
         }
