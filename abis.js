@@ -1,4 +1,5 @@
 //adding Sentry as soon as possible
+// Todo, check sentry and what is needed here
 Sentry.init({ 
   dsn: 'https://5494f535e0244513a301f2912f5d899f@sentry.io/4169463',
   integrations: [
@@ -8,13 +9,16 @@ Sentry.init({
   ],
 });
 
-var N_COINS = 2;
-var coin_precisions = [1e18, 1e6];
+var N_COINS = 4;
+// Edited to adjust for 4 coin pool and all bep20 tokens are 18 decimals compared to 6 for USDC on ETH
+var coin_precisions = [1e18, 1e18, 1e18, 1e18];
+// To do: verify if we need the old swap(s)
 var old_swap_address = '0x2e60CF74d81ac34eB21eEff58Db4D385920ef419';
 var swap_address = '0xA2B47E3D5c44877cca798226B7B8118F9BFb7A56';
 var token_address = '0x845838DF265Dcd2c412A1Dc9e959c7d08537f8a2';
 var old_token_address = '0x3740fb63ab7a09891d7c0d4299442A551D06F5fD';
 var migration_address = '0x54Ee22d5593FC76fB20EafAb66C45aAb3268B800';
+// TOdo: need to replace infura with the graph endpoint
 var infura_url = 'https://mainnet.infura.io/v3/c334bb4b45a444979057f0fb8a0c9d1b';
 
 var migration_abi = [

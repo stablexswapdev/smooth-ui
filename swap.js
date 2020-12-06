@@ -89,6 +89,8 @@ function setAmountPromise() {
     return makeCancelable(promise);
 }
 
+// This function makes sure that you can set the same token as the in and OUT
+  
 async function from_cur_handler() {
     from_currency = $('input[type=radio][name=from_cur]:checked').val();
     to_currency = $('input[type=radio][name=to_cur]:checked').val();
@@ -98,8 +100,7 @@ async function from_cur_handler() {
         $('#inf-approval').prop('checked', true)
     else
         $('#inf-approval').prop('checked', false);
-
-    await set_from_amount(from_currency);
+  await set_from_amount(from_currency);
     if (to_currency == from_currency) {
         if (from_currency == 0) {
             to_currency = 1;
@@ -110,7 +111,8 @@ async function from_cur_handler() {
     }
     await set_to_amount();
 }
-
+// This function makes sure that you can set the same token as the in and OUT
+ 
 async function to_cur_handler() {
     from_currency = $('input[type=radio][name=from_cur]:checked').val();
     to_currency = $('input[type=radio][name=to_cur]:checked').val();
