@@ -38,7 +38,7 @@ async function highlight_input() {
 function promiseTimeout(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-
+// Adjusted to 0.97 for red display parameter in case some stablecoins have larger deviations
 let promise = makeCancelable(Promise.resolve());
 async function set_to_amount() {
     promise.cancel();
@@ -46,7 +46,7 @@ async function set_to_amount() {
         .then(async ([dy, dy_, dx_]) => {
             $('#to_currency').val(dy);
             var exchange_rate = (dy_ / dx_).toFixed(4);
-            if(exchange_rate <= 0.98) $("#to_currency").css('background-color', 'red')
+            if(exchange_rate <= 0.97) $("#to_currency").css('background-color', 'red')
             else $("#to_currency").css('background-color', '#505070')
             if(isNaN(exchange_rate)) exchange_rate = "Not available"
             var default_account = (await web3provider.eth.getAccounts())[0];
@@ -102,6 +102,7 @@ async function from_cur_handler() {
         $('#inf-approval').prop('checked', false);
   await set_from_amount(from_currency);
     if (to_currency == from_currency) {
+        console.log("samecoin!");
         if (from_currency == 0) {
             to_currency = 1;
         } else {
@@ -168,7 +169,7 @@ function change_max_slippage() {
 async function init_ui() {
     $('input[type=radio][name=from_cur]').change(from_cur_handler);
     $('input[type=radio][name=to_cur]').change(to_cur_handler);
-
+// Defaults to BUSD and USDT
     $("#from_cur_0").attr('checked', true);
     $("#to_cur_1").attr('checked', true);
 
