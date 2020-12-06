@@ -8,7 +8,7 @@ var all_fees = {}
 async function init_contracts() {
     try {
         let networkId = await web3.eth.net.getId();
-        if(networkId != 1) {
+        if(networkId != 56) {
             $('#error-window').text('Error: wrong network type. Please switch to mainnet');
             $('#error-window').show();
         }

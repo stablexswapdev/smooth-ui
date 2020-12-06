@@ -20,7 +20,7 @@ var token_address = '0x845838DF265Dcd2c412A1Dc9e959c7d08537f8a2';
 var old_token_address = '0x3740fb63ab7a09891d7c0d4299442A551D06F5fD';
 var migration_address = '0x54Ee22d5593FC76fB20EafAb66C45aAb3268B800';
 // TOdo: need to replace infura with the graph endpoint
-var infura_url = 'https://mainnet.infura.io/v3/c334bb4b45a444979057f0fb8a0c9d1b';
+var infura_url = 'https://bsc-dataseed.binance.org/';
 
 var migration_abi = [
  {
