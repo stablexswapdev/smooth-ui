@@ -92,11 +92,12 @@ button,
   font-family: inherit;
   font-size: inherit;
   background: grey;
-  padding: 0 1em;
+  padding: 0.6em 0.6em;
   box-shadow: .5em .5em 3px rgba(0,0,0,.5);
   position: relative;
   transition: .2s all ease-in;
   border: 1px outset grey;
+  border-radius: 7px;
 }
 
 button.full-width,
@@ -152,14 +153,16 @@ button:first-letter,
 input, textarea {
   background: grey;
   color: aqua;
-  width: 100%;
+  width: 96%;
   max-width: 100%;
   font-size: 12pt;
 }
 
 input {
-  padding: 1px 0 1px 0;
-  border-radius: 0;
+  padding: 0.6em 0.6em;
+  /* margin: 0em 0em 0em 0em; */
+  border-radius: 8px;
+
 }
 
 input:disabled {
@@ -295,16 +298,19 @@ p.exchange-rate {
   }
 }
 
+
 .info > fieldset {
   flex: 1;
   padding: 1em;
   border: 0;
-  border-radius: 10px;
+  border-radius: 1em;
 }
 
 .info > div,
 .info > div fieldset {
   height: 100%;
+
+  border-radius: 10px;
 }
 
 div.info table {
@@ -405,6 +411,7 @@ div.info table td {
 }
 .poolsdialog > div {
   cursor: pointer;
+
 }
 .poolsdialog > div > span{
   padding-right: 2em;
