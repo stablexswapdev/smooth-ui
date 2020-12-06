@@ -13,6 +13,7 @@ var N_COINS = 4;
 // Edited to adjust for 4 coin pool and all bep20 tokens are 18 decimals compared to 6 for USDC on ETH
 var coin_precisions = [1e18, 1e18, 1e18, 1e18];
 // To do: verify if we need the old swap(s)
+//  and update to new addresses
 var old_swap_address = '0x2e60CF74d81ac34eB21eEff58Db4D385920ef419';
 var swap_address = '0xA2B47E3D5c44877cca798226B7B8118F9BFb7A56';
 var token_address = '0x845838DF265Dcd2c412A1Dc9e959c7d08537f8a2';
