@@ -158,7 +158,9 @@ input, textarea {
   font-size: 12pt;
 }
 
-
+.li input {
+  padding: 0em 0em;
+}
 
 input {
   padding: 0.2em 0.2em;
