@@ -5,6 +5,7 @@ let ADDRESSES = {};
 const CURVE = swap_address;
 const CURVE_TOKEN = token_address;
 //web3.utils.sha3('Transfer(address,address,uint256)')
+// Check if this transfer needs to be updated
 const TRANSFER_TOPIC =
     '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef';
 
@@ -13,7 +14,7 @@ let priceData;
 function fromNative(curr, value) {
     return value.divRound(BN(1e16)).toNumber()
 }
-
+// TODO: Update this 
 function convertValues(curr, exchangeRate, value) {
     if(curr == 'cDAI') exchangeRate*=1e8
     if(curr == 'cUSDC') exchangeRate*=1e20
